@@ -1,17 +1,23 @@
 import { styled } from "styled-components";
 
+import { COLORS, STYLES, FONT_WEIGHT, FONT_FAMILY } from "../../constants";
+
 export const Container = styled.div`
   width: 100%;
-  background: #055393;
-  padding: 1em 16px;
+  background: ${COLORS.secondary};
+  padding: 0 16px;
+`;
+
+export const ContentWrapper = styled.div`
+  ${STYLES.RBC}
+  justify-content: flex-start;
 `;
 
 export const Content = styled.div`
   padding: 10px 16px;
   max-width: 1200px;
   margin: auto;
-  display: flex;
-  align-items: center;
+  ${STYLES.RBC}
   justify-content: flex-start;
 `;
 
@@ -23,11 +29,9 @@ export const LogoImg = styled.img`
 `;
 
 export const TextContainer = styled.div`
-  color: #fff;
+  color: ${COLORS.white};
   margin-left: 10px;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
+  ${STYLES.CCC}
   width: 80%;
   p {
     margin: 0px;
@@ -38,18 +42,16 @@ export const TextContainer = styled.div`
 export const Title = styled.div`
   font-size: 1.17rem;
   line-height: 1.8rem;
-  font-family: "Demi1";
+  font-family: ${FONT_FAMILY.Demi1};
 `;
 
 export const SubTitle = styled.div`
   font-size: 0.9rem;
   line-height: 1.2rem;
-  font-family: "Regular1";
-  //   font-weight: 600;
-  display: flex;
-  align-items: center;
+  font-family: ${FONT_FAMILY.Regular1};
+  ${STYLES.RBC};
   span {
-    font-family: "Bold";
+    font-family: ${FONT_FAMILY.Bold};
     cursor: pointer;
     &: hover {
       text-decoration: underline;
@@ -63,10 +65,10 @@ export const SubTitle = styled.div`
 `;
 
 export const Button = styled.div`
-  background-color: #fff;
+  background-color: ${COLORS.white};
   padding: 10px 24px;
-  color: #055393;
-  border: 2px solid #055393;
+  color: ${COLORS.secondary};
+  border: 2px solid ${COLORS.secondary};
   font-size: 1.15rem;
   border-radius: 4px;
   line-height: 1.4rem;
@@ -87,23 +89,91 @@ export const NavImg = styled.img`
 
 export const NavTextOption = styled.p`
   margin-right: 30px;
-  color: #393a3d;
-  font-family: "Demi1";
+  color: ${COLORS.tuna};
+  font-family: ${FONT_FAMILY.Demi1};
+  cursor: pointer;
+  border-bottom: 2px solid ${COLORS.white};
+  &:hover {
+    color: ${COLORS.thunderBird};
+    border-bottom: 2px solid ${COLORS.thunderBird};
+  }
 `;
 
 export const NavTextContent = styled.div`
   padding-left: 60px;
-  display: flex;
-  align-items: center;
+  ${STYLES.RBC};
+  align-items: flex-end;
   justify-content: flex-start;
 `;
 
 export const NavOptionsContainer = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  ${STYLES.RBC};
   min-height: 70px;
-  background-color: #fff;
+  background-color: ${COLORS.white};
   display: flex;
   padding: 0 40px;
+`;
+
+export const LanguageDropdownContent = styled.div`
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: 0 12px;
+  height: 70px;
+  &:hover {
+    background-color: ${COLORS.athensGray};
+  }
+`;
+
+export const LanguageDropdownText = styled.p`
+  font-family: ${FONT_FAMILY.Regular1};
+  padding: 0px;
+  margin: 0px;
+`;
+
+export const LanguageDropdownIcon = styled.div`
+  font-family: ${FONT_FAMILY.Regular1};
+  position: relative;
+  top: 4px;
+`;
+
+export const SignUpButton = styled.div`
+  padding: 7px 14px;
+  color: ${COLORS.primary};
+  border: 1px solid ${COLORS.primary};
+  font-family: ${FONT_FAMILY.Regular1};
+  font-size: 0.9rem;
+  margin-left: 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  &:hover {
+    background: ${COLORS.hawkesBlue};
+  }
+`;
+
+export const SignInButton = styled.div`
+  padding: 7px 14px;
+  background: ${COLORS.primary};
+  border: 1px solid ${COLORS.primary};
+  font-size: 0.9rem;
+  margin-left: 13px;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  height: fit-content;
+`;
+
+export const SignInButtonText = styled.p`
+  color: ${COLORS.white};
+  font-family: ${FONT_FAMILY.Regular1};
+  font-weight: ${FONT_WEIGHT.medium};
+  margin: 0px;
+  padding: 0px;
+  padding-left: 6px;
+`;
+
+export const LockImage = styled.img`
+  position: relative;
+  bottom: 1px;
 `;

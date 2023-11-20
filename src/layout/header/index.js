@@ -12,10 +12,20 @@ import {
   NavTextOption,
   NavTextContent,
   NavOptionsContainer,
+  LanguageDropdownContent,
+  LanguageDropdownText,
+  LanguageDropdownIcon,
+  SignUpButton,
+  SignInButton,
+  SignInButtonText,
+  LockImage,
+  ContentWrapper,
 } from "./styles";
 
 import WarningIconImg from "../../assets/images/a.svg";
+import LockImg from "../../assets/images/lock.svg";
 import ArrowRightIcon from "../../assets/images/arrowRight.svg";
+import { MdOutlineKeyboardArrowDown } from "react-icons/md";
 
 const navLinkOptions = [
   {
@@ -59,19 +69,33 @@ const Header = () => {
         </Content>
       </Container>
       <NavOptionsContainer>
+        <ContentWrapper>
+          <NavOptions>
+            <NavImg
+              src="https://digitalasset.intuit.com/IMAGE/A4H7Z5lhp/tt-logo-50-50-color.svg"
+              alt="img"
+            />
+            <NavTextContent>
+              {navLinkOptions.map((option) => (
+                <NavTextOption key={option.title}>{option.title}</NavTextOption>
+              ))}
+            </NavTextContent>
+          </NavOptions>
+        </ContentWrapper>
         <NavOptions>
-          <NavImg
-            src="https://digitalasset.intuit.com/IMAGE/A4H7Z5lhp/tt-logo-50-50-color.svg"
-            alt="img"
-          />
-          <NavTextContent>
-            {navLinkOptions.map((option) => (
-              <NavTextOption key={option.title}>{option.title}</NavTextOption>
-            ))}
-          </NavTextContent>
-        </NavOptions>
-        <NavOptions>
-          <p>En</p>
+          <LanguageDropdownContent>
+            <LanguageDropdownText>En</LanguageDropdownText>
+            <LanguageDropdownIcon>
+              <MdOutlineKeyboardArrowDown size={18} />
+            </LanguageDropdownIcon>
+          </LanguageDropdownContent>
+          <ContentWrapper>
+            <SignUpButton>Sign up</SignUpButton>
+            <SignInButton>
+              <LockImage src={LockImg} alt="img" />
+              <SignInButtonText>Sign in</SignInButtonText>
+            </SignInButton>
+          </ContentWrapper>
         </NavOptions>
       </NavOptionsContainer>
     </>
