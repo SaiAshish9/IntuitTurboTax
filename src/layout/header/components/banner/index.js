@@ -5,6 +5,8 @@ import ArrowRightIcon from "assets/images/arrowRight.svg";
 
 import { Container, Content, LogoImg, TextContainer, Title, SubTitle, Button } from "./styles"
 
+import I18n from "common/I18n";
+
 const Banner = () => {
   return (
     <Container>
@@ -12,7 +14,7 @@ const Banner = () => {
         <LogoImg alt="img" src={WarningIconImg} />
         <TextContainer>
           <Title>
-            <p>The deadline to file a 2022 tax return has passed</p>
+            <I18n t="deadlineBannerText" />
           </Title>
           <SubTitle>
             <p>

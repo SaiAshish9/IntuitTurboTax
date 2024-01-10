@@ -46,7 +46,7 @@ export const SubTitle = styled.div`
   font-family: ${FONT_FAMILY.Regular1};
   ${STYLES.RBC};
   span {
-    font-family: ${FONT_FAMILY.Bold};
+    font-family: ${FONT_FAMILY.Demi1};
     cursor: pointer;
     &: hover {
       text-decoration: underline;

@@ -6,6 +6,9 @@ const NavLinkOptions = [
     title: "Do it yourself",
   },
   {
+    title: "Business taxes",
+  },
+  {
     title: "Resources",
   },
   {
