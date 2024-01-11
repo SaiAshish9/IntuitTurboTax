@@ -1,7 +1,8 @@
 import React from "react";
 import { Container, Content } from "./styles";
+import { withRouter } from "react-router-dom";
 
-const PopOver = ({ setShowDropDown }) => {
+const PopOver = ({ setShowDropDown, setSelectedLanguage, selectedLanguage, history }) => {
 
   return (
     <Container
@@ -12,9 +13,17 @@ const PopOver = ({ setShowDropDown }) => {
         setShowDropDown(false);
       }}
     >
-      <Content>Español</Content>
+      <Content
+        onClick={() => {
+          const language = selectedLanguage == "En" ? "Es" : "En";
+          history.push("/" + (selectedLanguage != "En" ? "en" : "es"));
+          setSelectedLanguage(language);
+        }}
+      >
+        {selectedLanguage != "En" ? "English" : "Español"}
+      </Content>
     </Container>
   );
 };
 
-export default PopOver;
+export default withRouter(PopOver);

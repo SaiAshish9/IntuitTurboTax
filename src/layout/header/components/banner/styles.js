@@ -45,7 +45,7 @@ export const SubTitle = styled.div`
   line-height: 1.2rem;
   font-family: ${FONT_FAMILY.Regular1};
   ${STYLES.RBC};
-  span {
+  .span1 {
     font-family: ${FONT_FAMILY.Demi1};
     cursor: pointer;
     &: hover {
@@ -66,7 +66,9 @@ export const Button = styled.div`
   border: 2px solid ${COLORS.secondary};
   font-size: 1.15rem;
   border-radius: 4px;
-  line-height: 1.4rem;
+  text-align: center;
+  white-space: nowrap;
+  margin-left: 0.2rem;
   &:hover {
     cursor: pointer;
   }

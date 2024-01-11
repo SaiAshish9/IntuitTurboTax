@@ -13,7 +13,7 @@
 @font-face {
   font-family: "Demi2";
   src: local("AvenirNextforINTUIT_Demi2"),
-    url("./assets/fonts/AvenirNextforINTUIT-Demi.2.woff2") format("woff2");
+    url("./assets/fonts/AvenirNextforINTUIT-Demi.2.woff2") format("woff");
 }
 
 @font-face {
@@ -29,6 +29,11 @@
 }
 
 body {
-    background-color: #055393;
+    background-color: #fff;
     overflow-x: hidden;
+}
+
+p {
+  margin: 0px;
+  padding: 0px;
 }

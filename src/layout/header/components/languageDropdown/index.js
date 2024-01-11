@@ -11,8 +11,13 @@ import { MdOutlineKeyboardArrowDown } from "react-icons/md";
 
 import { PopOver } from "./components";
 
-const LanguageDropdown = () => {
+import { withRouter } from "react-router-dom";
+
+const LanguageDropdown = ({ history }) => {
   const [showDropDown, setShowDropDown] = useState(false);
+  const pathname = history.location.pathname;
+  const language = pathname == '/en' ? 'En' : pathname == '/es' ? 'Es' : null;
+  const [selectedLanguage, setSelectedLanguage] = useState(language);
 
   return (
     <LanguageDropdownContainer>
@@ -24,13 +29,15 @@ const LanguageDropdown = () => {
           setShowDropDown(false);
         }}
       >
-        <LanguageDropdownText>En</LanguageDropdownText>
+        <LanguageDropdownText>{selectedLanguage}</LanguageDropdownText>
         <LanguageDropdownIcon>
           <MdOutlineKeyboardArrowDown size={18} />
         </LanguageDropdownIcon>
       </LanguageDropdownContent>
       {showDropDown && (
         <PopOver
+          setSelectedLanguage={setSelectedLanguage}
+          selectedLanguage={selectedLanguage}
           setShowDropDown={setShowDropDown}
         />
       )}
@@ -38,4 +45,4 @@ const LanguageDropdown = () => {
   );
 };
 
-export default LanguageDropdown;
+export default withRouter(LanguageDropdown);

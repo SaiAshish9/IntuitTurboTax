@@ -3,7 +3,15 @@ import React from "react";
 import WarningIconImg from "assets/images/a.svg";
 import ArrowRightIcon from "assets/images/arrowRight.svg";
 
-import { Container, Content, LogoImg, TextContainer, Title, SubTitle, Button } from "./styles"
+import {
+  Container,
+  Content,
+  LogoImg,
+  TextContainer,
+  Title,
+  SubTitle,
+  Button,
+} from "./styles";
 
 import I18n from "common/I18n";
 
@@ -18,15 +26,16 @@ const Banner = () => {
           </Title>
           <SubTitle>
             <p>
-              If you started your 2022 tax return with TurboTax, you have until
-              Oct 31 at 9PM PST to file your return online. You may owe a late
-              filing fee for <br /> filing after Oct 16. <span>Learn more</span>{" "}
-              {""}
+              <I18n t="deadlineBannerSubText" />
+              {" "}
+              <span className="span1">
+                <I18n t="learnMore" />
+              </span>{" "}
               <img src={ArrowRightIcon} alt="img" />
             </p>
           </SubTitle>
         </TextContainer>
-        <Button>File now</Button>
+        <Button><I18n t="fileNow" /></Button>
       </Content>
     </Container>
   );

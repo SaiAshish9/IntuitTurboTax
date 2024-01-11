@@ -5,13 +5,13 @@ import translations from "constants/translations";
 
 const translation = {
   en: {},
+  es: {},
 };
 
 translations.forEach((e) => {
   translation["en"][`${e.text}`] = e.en;
+  translation["es"][`${e.text}`] = e.es;
 });
-
-console.log(translations);
 
 const I18n = createI18n(locales, translation);
 

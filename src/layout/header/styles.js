@@ -5,6 +5,7 @@ import { COLORS, STYLES, FONT_FAMILY } from "constants/index";
 export const ContentWrapper = styled.div`
   ${STYLES.RBC}
   justify-content: flex-start;
+  margin-top: 0px;
 `;
 
 export const NavOptions = styled.div`
@@ -38,7 +39,7 @@ export const NavTextContent = styled.div`
 
 export const NavOptionsContainer = styled.div`
   ${STYLES.RBC};
-  min-height: 70px;
+  max-height: 70px;
   background-color: ${COLORS.white};
   display: flex;
   padding: 0 40px;
