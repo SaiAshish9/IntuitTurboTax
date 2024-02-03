@@ -31,7 +31,7 @@ export const NavTextOption = styled.p`
 `;
 
 export const NavTextContent = styled.div`
-  padding-left: 60px;
+  padding-left: 48px;
   ${STYLES.RBC};
   align-items: flex-end;
   justify-content: flex-start;

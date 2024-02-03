@@ -115,3 +115,7 @@ export const SeeHowItWorksBtnText = styled.p`
   color: #055393;
   margin-left: 7px;
 `;
+
+export const GuaranteedText = styled.span`
+  color: #0077c5;
+`;

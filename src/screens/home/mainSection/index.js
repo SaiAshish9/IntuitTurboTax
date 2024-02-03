@@ -12,6 +12,7 @@ import {
   StartBtnSubTitle,
   SeeHowItWorksBtn,
   SeeHowItWorksBtnText,
+  GuaranteedText,
 } from "./styles";
 import { PiPlayCircleFill } from "react-icons/pi";
 import I18n from "common/I18n";
@@ -28,9 +29,9 @@ const MainSection = ({ history }) => {
             </Content>
             <SubTitle>
               <I18n t="subTitle" />—
-              <span style={{ color: "#0077c5" }}>
+              <GuaranteedText>
                 <I18n t="guaranteed" />.
-              </span>
+              </GuaranteedText>
             </SubTitle>
             <BtnContainer>
               <StartBtn>
