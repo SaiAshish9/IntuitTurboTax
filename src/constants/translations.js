@@ -41,14 +41,14 @@ const translations = [
   {
     text: "title1",
     en: "File your own taxes",
-    es: "Presenta tus propios",
+    es: "Presenta tus impuestos",
   },
   {
     text: "title2",
     en: "with confidence",
     es: (
       <p>
-        impuestos con <br /> confianza
+       con confianza
       </p>
     ),
   },
@@ -69,10 +69,9 @@ const translations = [
     es: (
       <span>
         Como proveedor número uno de preparación de <br />
-        impuestos en Estados Unidos, <br />
-        TurboTax lo hace Rápido y fácil <br />
-        de obtener su reembolso máximo y <br />
-        100% cálculos precisos
+        impuestos en Estados Unidos, TurboTax te permite<br />
+        obtener tu máximo reembolso de forma rápida y <br />
+        sencilla, con cálculos 100 % precisos
       </span>
     ),
   },
@@ -84,12 +83,12 @@ const translations = [
   {
     text: "startForFree",
     en: "Start for free",
-    es: "Empieza gratis"
+    es: "Comenienza gratis"
   },
   {
     text: "payOnly",
     en: "Pay only when you file",
-    es: <p>Pague solo cuando <br /> presente la solicitud</p>
+    es: <p>Paga cuando presentes la declaración</p>
   }
 ];
 

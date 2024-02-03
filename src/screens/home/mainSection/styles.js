@@ -6,17 +6,24 @@ export const ParentContainer = styled.div`
   background-color: #f4f4ef;
   height: 500px;
   width: 100%;
-  margin-bottom: 70px;
   display: flex;
   align-items: center;
   justify-content: center;
+  ${({ es }) =>
+    es
+      ? css`
+          margin-bottom: 0px;
+        `
+      : css`
+          margin-bottom: 70px;
+        `};
 `;
 
 export const Container = styled.div`
   background-color: #f4f4ef;
-  width: 85%;
+  width: ${({ es }) => es ? "90%" : "85%"};
   height: 500px;
-  background-image: url("https://digitalasset.intuit.com/IMAGE/A7Iljyjbv/DIY_HowitWorks_Dev-and-Lamar_XL.jpg");
+  background-image: url("${({ image }) => image}");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -32,8 +39,16 @@ export const LeftContainer = styled.div`
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-  padding: 0px 7rem;
   margin-bottom: 1.2rem;
+  ${({ es }) =>
+    es
+      ? css`
+          padding-left: calc(7rem + 2.5%);
+          padding-right: 7rem;
+        `
+      : css`
+          padding: 0px 7rem;
+        `};
 `;
 
 export const Content = styled.p`

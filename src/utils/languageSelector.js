@@ -13,7 +13,7 @@ export function obtainLanguageBasedOnPathname(pathname) {
 }
 
 export const isEnSelected = (pathname) =>
-  obtainLanguageBasedOnPathname(pathname) == "/en";
+  obtainLanguageBasedOnPathname(pathname) == LANGUAGES.En;
 
 export const isEsSelected = (pathname) =>
-  obtainLanguageBasedOnPathname(pathname) == "/es";
+  obtainLanguageBasedOnPathname(pathname) == LANGUAGES.Es;
