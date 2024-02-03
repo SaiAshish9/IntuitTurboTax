@@ -17,8 +17,12 @@ import {
 import { PiPlayCircleFill } from "react-icons/pi";
 import I18n from "common/I18n";
 import { withRouter } from "react-router-dom";
+import { isEsSelected } from "utils/languageSelector";
 
 const MainSection = ({ history }) => {
+
+  const pathname = history.location.pathname;
+
   return (
     <>
       <ParentContainer>
@@ -38,7 +42,7 @@ const MainSection = ({ history }) => {
                 <StartBtnTitle><I18n t="startForFree" /></StartBtnTitle>
                 <StartBtnSubTitle><I18n t="payOnly" /></StartBtnSubTitle>
               </StartBtn>
-              <SeeHowItWorksBtn es={history.location.pathname == "/es"}>
+              <SeeHowItWorksBtn es={isEsSelected(pathname)}>
                 <PiPlayCircleFill size={21} />
                 <SeeHowItWorksBtnText><I18n t="howItWorks" /></SeeHowItWorksBtnText>
               </SeeHowItWorksBtn>
@@ -46,7 +50,7 @@ const MainSection = ({ history }) => {
           </LeftContainer>
         </Container>
       </ParentContainer>
-      <Banner></Banner>
+      <Banner />
     </>
   );
 };

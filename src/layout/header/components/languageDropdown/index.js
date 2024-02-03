@@ -13,17 +13,7 @@ import { PopOver } from "./components";
 
 import { withRouter } from "react-router-dom";
 
-function obtainLanguageBasedOnPathname(pathname) {
-  switch (pathname) {
-    case "/":
-    case "/en":
-      return "En";
-    case "/es":
-      return "Es";
-    default:
-      return "En";
-  }
-}
+import { obtainLanguageBasedOnPathname } from "utils/languageSelector";
 
 const LanguageDropdown = ({ history }) => {
   const [showDropDown, setShowDropDown] = useState(false);

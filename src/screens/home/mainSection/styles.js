@@ -55,7 +55,7 @@ export const SubTitle = styled.p`
 
 export const Banner = styled.div`
   background-color: #ebf9ff;
-  height: 7rem;
+  height: 9rem;
   width: 100%;
 `;
 
