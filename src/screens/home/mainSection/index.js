@@ -1,6 +1,5 @@
 import React from "react";
 import {
-  Banner,
   Container,
   ParentContainer,
   Content,
@@ -18,6 +17,7 @@ import { PiPlayCircleFill } from "react-icons/pi";
 import I18n from "common/I18n";
 import { withRouter } from "react-router-dom";
 import { isEsSelected, isEnSelected } from "utils/languageSelector";
+import FreeBannerEdition from "./components";
 
 const MainSection = ({ history }) => {
   const pathname = history.location.pathname;
@@ -80,7 +80,7 @@ const MainSection = ({ history }) => {
           </LeftContainer>
         </Container>
       </ParentContainer>
-      <Banner />
+      <FreeBannerEdition />
     </>
   );
 };

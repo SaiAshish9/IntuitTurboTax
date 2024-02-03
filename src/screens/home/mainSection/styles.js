@@ -68,12 +68,6 @@ export const SubTitle = styled.p`
   align-self: flex-start;
 `;
 
-export const Banner = styled.div`
-  background-color: #ebf9ff;
-  height: 9rem;
-  width: 100%;
-`;
-
 export const BtnContainer = styled.div`
   margin-top: 1.12rem;
   display: flex;
